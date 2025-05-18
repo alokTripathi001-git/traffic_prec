@@ -402,8 +402,7 @@ def traffic_pred():
         """
 
         client = EuriaiClient(
-            api_key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZWU2NTg0MS1hZDQ0LTQ1YmMtODcxNy1kZDRkNzM2ZTE1YjIiLCJlbWFpbCI6ImFsb2t0cmlwYXRoaTA3MEBnbWFpbC5jb20iLCJpYXQiOjE3NDYwNjM1NDQsImV4cCI6MTc3NzU5OTU0NH0.r17aL4xvJnvhrfGJzalSTjerrh6RG09kkGKd6qe7Rd4",  # Secure your key
-            # model="llama-4-scout-17b-16e-instruct"
+            api_key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxZWU2NTg0MS1hZDQ0LTQ1YmMtODcxNy1kZDRkNzM2ZTE1YjIiLCJlbWFpbCI6ImFsb2t0cmlwYXRoaTA3MEBnbWFpbC5jb20iLCJpYXQiOjE3NDYwNjM1NDQsImV4cCI6MTc3NzU5OTU0NH0.r17aL4xvJnvhrfGJzalSTjerrh6RG09kkGKd6qe7Rd4",
             model="gpt-4.1-nano"
         )
 
