@@ -1,0 +1,10 @@
+flask
+joblib
+scikit-learn
+requests
+openrouteservice
+geopy
+euriai
+polyline
+flask_cors
+geocoder

@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: #f0f2f5;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    height: 100vh;
+}
+
+/* Control Panel */
+.control-panel {
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.form-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+input[type="text"], 
+input[type="time"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.predict-btn {
+    width: 100%;
+    padding: 14px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.predict-btn:hover {
+    background: #45a049;
+}
+
+/* Map Container */
+.map-container {
+    height: 100vh;
+    background: #e0e6ed;
+}
+
+.leaflet-container {
+    height: 100%;
+    z-index: 1;
+}
+
+/* Results Card */
+.results-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.route-info-box {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #e0e6ed;
+}
+
+.route-info-box strong {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.server-results {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}

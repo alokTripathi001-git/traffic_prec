@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Traffic Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='accident.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="form-card">
+                <h1>🚦Accident Reporter</h1>
+                <form id="routeForm" method="POST">
+                    <div class="input-group">
+                        <label>Destination:</label>
+                        <input type="text" name="destination" required>
+                    </div>
+                    <button type="submit">Analyze Route</button>
+                </form>
+            </div>
+
+            <!-- Result Display -->
+            <div class="results-card">
+                {% if response %}
+                    <div class="response-content">
+                        <h3>📢 Update</h3>
+                        <p>{{ response }}</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container" id="map"></div>
+    </div>
+
+    <!-- Backend-passed Coordinates -->
+    <script>
+        const DEST_COORDS = {{ dest_coords | tojson | safe }};
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="{{ url_for('static', filename='accident.js') }}"></script>
+</body>
+</html>

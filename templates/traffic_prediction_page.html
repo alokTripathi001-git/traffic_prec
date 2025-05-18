@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Predictor</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='traffic.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="form-card">
+                <h1>🚦 Smart Traffic Predictor</h1>
+                <form id="routeForm" method="POST">
+                    <div class="input-group">
+                        <label>Destination:</label>
+                        <input type="text" name="destination" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Time:</label>
+                        <input type="time" name="time" required>
+                    </div>
+                    <button type="submit" class="predict-btn">Analyze Route</button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-card">
+                <div id="directionsList"></div>
+                <div id="routeInfo" class="route-info-box"></div>
+                {% if route_ans %}
+                    <div class="server-results">
+                        {% for route in route_ans %}
+                            <p>{{ route }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="map-container" id="map"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="{{ url_for('static', filename='traffic.js') }}"></script>
+</body>
+</html>
