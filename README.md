@@ -177,6 +177,7 @@ This project is made for **learning and demonstration purposes only** under the 
 ## ✉️ Contact
 
 For any query or collaboration:  
-📧 aloktripathi@example.com *(replace with your real email)*
+📧aloktripathi070@gmail.com
+
 
 
